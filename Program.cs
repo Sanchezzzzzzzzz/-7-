@@ -56,7 +56,7 @@ int colums = PrintMes("Введите позицию столбца");
 int[,] matrix1 = new int[3,4];
 MakeArray(matrix1);
 PrintArray1(matrix1);
-if((rows-1<matrix1.GetLength(0) && colums-1<matrix1.GetLength(1)) || (rows-1<1 && colums-1<1)){
+if((rows-1<matrix1.GetLength(0) && colums-1<matrix1.GetLength(1)) && (rows-1>0 && colums-1>0)){
     Console.WriteLine($"Элемент под позицией {rows}, {colums}: {matrix1[rows-1,colums-1]}");
 } 
 else{
