@@ -56,7 +56,7 @@ int colums = PrintMes("Введите позицию столбца");
 int[,] matrix1 = new int[3,4];
 MakeArray(matrix1);
 PrintArray1(matrix1);
-if(rows-1<matrix1.GetLength(0) && colums-1<matrix1.GetLength(1)){
+if((rows-1<matrix1.GetLength(0) && colums-1<matrix1.GetLength(1)) || (rows-1<1 && colums-1<1)){
     Console.WriteLine($"Элемент под позицией {rows}, {colums}: {matrix1[rows-1,colums-1]}");
 } 
 else{
@@ -74,7 +74,8 @@ void InputArray(double[,] array){
 }
 void MeanArifm(double[,] array){
     for (int j = 0; j < array.GetLength(1); j++)
-    {   double sum = 0;
+    {   
+        double sum = 0;
         for (int i = 0; i < array.GetLength(0); i++)
         {
             sum+=array[i, j];    
