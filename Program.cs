@@ -62,5 +62,30 @@ if(rows-1<matrix1.GetLength(0) && colums-1<matrix1.GetLength(1)){
 else{
     Console.WriteLine("Вы вышли за пределы массива");
 }
+//Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+void InputArray(double[,] array){
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(1, 100);
+        }
+    }
+}
+void MeanArifm(double[,] array){
+    for (int j = 0; j < array.GetLength(1); j++)
+    {   double sum = 0;
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            sum+=array[i, j];    
+        }
+        Console.WriteLine($"Среднее арифметическое {j} столбца: {sum/array.GetLength(1)}");
+        Console.WriteLine();
+    }
+}
+double[,] array222 = new double[3, 4];
+InputArray(array222);
+PrintArray(array222);
+MeanArifm(array222);
 
 
