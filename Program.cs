@@ -56,8 +56,8 @@ int colums = PrintMes("Введите позицию столбца");
 int[,] matrix1 = new int[3,4];
 MakeArray(matrix1);
 PrintArray1(matrix1);
-if(rows<matrix1.GetLength(0) && colums<matrix1.GetLength(1)){
-    Console.WriteLine($"Элемент под позицией {rows}, {colums}: {matrix1[rows,colums]}");
+if(rows-1<matrix1.GetLength(0) && colums-1<matrix1.GetLength(1)){
+    Console.WriteLine($"Элемент под позицией {rows}, {colums}: {matrix1[rows-1,colums-1]}");
 } 
 else{
     Console.WriteLine("Вы вышли за пределы массива");
