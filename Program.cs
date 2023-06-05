@@ -80,7 +80,7 @@ void MeanArifm(double[,] array){
         {
             sum+=array[i, j];    
         }
-        Console.WriteLine($"Среднее арифметическое {j} столбца: {sum/array.GetLength(1)}");
+        Console.WriteLine($"Среднее арифметическое {j+1} столбца: {sum/array.GetLength(1)}");
         Console.WriteLine();
     }
 }
